@@ -1,6 +1,8 @@
 package com.scaleup.userdetailsservice.dto;
 
-public class UserDataDto {
+import java.io.Serializable;
+
+public class UserDataDto implements Serializable {
 
 	private String firstName;
 	private String lastName;

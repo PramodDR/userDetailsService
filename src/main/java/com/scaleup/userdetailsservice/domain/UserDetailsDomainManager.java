@@ -6,4 +6,5 @@ import com.scaleup.userdetailsservice.dto.UserDataDto;
 
 public interface UserDetailsDomainManager {
 	CompletableFuture<Void> addUser(UserDataDto userDataDto);
+	CompletableFuture<Void> deleteUser(String email);
 }

@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.scaleup.userdetailsservice.dto.UserDataDto;
+
 @Entity
 @Table(name = "USER_DETAILS")
 public class UserDetailsEntity {
@@ -55,6 +57,14 @@ public class UserDetailsEntity {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public UserDataDto toDto() {
+		UserDataDto userDataDto = new UserDataDto();
+		userDataDto.setEmail(this.email);
+		userDataDto.setFirstName(this.firstName);
+		userDataDto.setLastName(this.lastName);
+		return userDataDto;
 	}
 
 }
